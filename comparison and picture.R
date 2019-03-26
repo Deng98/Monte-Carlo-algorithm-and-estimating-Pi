@@ -1,0 +1,26 @@
+n=10^3           #comparison and picture
+options(digits=9)
+size_dot=1
+x=runif(n)
+y=runif(n)
+f=function(x)
+sqrt(1-x^2)
+g=function(x,y)
+sqrt(x^2+y^2)
+z1=seq(0,1,1/(10^3))
+z=seq(0,1,1/n)
+plot(x[which(y<=f(x))],y[which(x<=f(y))],xlab="X",ylab="Y",col='red',asp=1,pch=20,cex=size_dot)
+points(x[which(y>f(x))],y[which(x>f(y))],col='blue',pch=20,cex=size_dot)
+lines(z1,f(z1),col='black')
+a1=sum(g(x,y)<=1)
+a=4*a1/n
+b1=sum(y<=f(x))
+b=4*b1/n
+c1=mean(f(x))
+c=4*c1
+d1=sum((1/n)*f(z))
+d=4*d1
+a
+b
+c
+d
