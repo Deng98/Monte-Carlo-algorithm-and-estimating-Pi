@@ -1,2 +1,2 @@
-# The-Monte-Carlo-algorithm-and-estimate-Pi
+# The-Monte-Carlo-algorithm-and-estimating-Pi
 There are some methods to approximate the value of pi.
